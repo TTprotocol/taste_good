@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>멋진맛집</title>
+
+		<style>
+			body {
+				width: 100%;
+			}
+			header {
+				width: 90%;
+				height: 250px;
+				border: 1px solid red;
+				box-sizing: border-box;
+				margin: 30px auto;
+				padding: 20px;
+			}
+			#bannerWrap {
+				width: 100%;
+				height: 100%;
+				border: 1px solid blue;
+				margin: 0 auto;
+				border-radius: 30px;
+			}
+			#banner {
+				width: 300%;
+				height: 100%;
+				border: 1px solid green;
+				display: flex;
+			}
+			.bannerImg {
+				width: 33.3333%;
+				height: 100%;
+				border: 1px solid red;
+			}
+
+			section {
+				width: 90%;
+				height: 400px;
+				border: 1px solid red;
+				margin: 30px auto;
+				box-sizing: border-box;
+			}
+
+			#category {
+				width: 100%;
+				height: 150px;
+				/* border: 1px solid orange; */
+				/* padding: 20px; */
+				box-sizing: border-box;
+			}
+
+			#category tr td {
+				width: 18%;
+				text-align: center;
+				/* border: 1px solid blue; */
+				border-radius: 100%;
+				margin: 20px;
+				padding: 30px;
+			}
+
+			#category tr td img {
+				width: 100%;
+			}
+
+			#recommand {
+				width: 100%;
+				height: 250px;
+				border: 1px solid blue;
+				padding: 20px;
+				display: flex;
+				box-sizing: border-box;
+			}
+
+			.team {
+				width: 33.333%;
+				border: 1px solid green;
+				margin: 15px;
+				text-align: center;
+				overflow: hidden;
+				display: flex;
+			}
+
+			.team div {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center; /* 왼쪽 정렬 */
+			}
+
+			.team img {
+				width: 60%;
+				/* margin: 10px 10px 0 10px;
+				display: inline-block; */
+				margin-top: 10px;
+				margin-bottom: 10px;
+				transition: width 0.3s ease-in-out;
+			}
+
+			.team p {
+				width: 100%;
+				text-align: center;
+			}
+		</style>
+
+		<script src="jquery-1.12.3.js"></script>
+		<script>
+			$(document).ready(function () {
+				let count = 0;
+
+				setInterval(function () {
+					if (count >= 2) count = 0;
+					else count++;
+
+					$("#banner").css({
+						marginLeft: -100 * count + "%",
+					});
+				}, 3000);
+
+				$(".team").mouseover(function () {
+					$(this)
+						.css({
+							width: "100%",
+						})
+						.siblings(".team")
+						.css({
+							display: "none",
+						});
+
+					$(this).children("div").css({
+						width: "30%",
+					});
+
+					// $(this).children("img").css({
+					// 	width: "20%",
+					// 	margin: "10px",
+					// 	display: "flex",
+					// 	jusfyContent: "flex-start",
+					// });
+
+					// $(this).children("p").css({
+					// 	width: "20%",
+					// 	margin: "10px",
+					// 	// display: "flex",
+					// 	// jusfyContent: "center",
+					// });
+				});
+
+				$(".team").mouseleave(function () {
+					$(".team").css({
+						width: "33.333%",
+						display: "block",
+					});
+
+					$(this).children("div").css({
+						width: "100%",
+					});
+
+					// $(".team").children("img").css({
+					// 	width: "60%",
+					// 	margin: "10px",
+					// 	display: "inline-block",
+					// });
+
+					// $(".team").children("p").css({
+					// 	width: "100%",
+					// 	textAlign: "center",
+					// 	border: "none",
+					// 	margin: "0",
+					// 	display: "block",
+					// });
+				});
+
+				// $(".team").mouseover(function () {
+				// 	$(this)
+				// 		.css({
+				// 			width: "100%",
+				// 			display: "flex",
+				// 			justifyContent: "flex-start", // 내부 요소 왼쪽 정렬
+				// 		})
+				// 		.siblings(".team")
+				// 		.css({
+				// 			display: "none",
+				// 		});
+
+				// 	$(this).children("div").css({
+				// 		width: "40%", // 내부 요소 크기 유지
+				// 	});
+
+				// 	$(this).find("img").css({
+				// 		width: "20%", // 이미지 크기 조정
+				// 	});
+				// });
+
+				// $(".team").mouseleave(function () {
+				// 	$(".team")
+				// 		.css({
+				// 			width: "33.333%",
+				// 			display: "flex",
+				// 			justifyContent: "center",
+				// 		})
+				// 		.children("div")
+				// 		.css({
+				// 			width: "auto",
+				// 		});
+
+				// 	$(".team").find("img").css({
+				// 		width: "60%",
+				// 	});
+
+				// 	$(".team").siblings(".team").css({
+				// 		display: "flex",
+				// 	});
+				// });
+			});
+		</script>
+	</head>
+	<body>
+		<header>
+			<!-- 맛집 배너 -->
+			<div id="bannerWrap">
+				<div id="banner">
+					<div class="bannerImg">tset1</div>
+					<div class="bannerImg">tset2</div>
+					<div class="bannerImg">tset3</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<!-- 맛집 카테고리 -->
+			<table id="category">
+				<tbody>
+					<tr id="test">
+						<td><img src="testImg.png" alt="" /></td>
+						<td><img src="testImg.png" alt="" /></td>
+						<td><img src="testImg.png" alt="" /></td>
+						<td><img src="testImg.png" alt="" /></td>
+						<td><img src="testImg.png" alt="" /></td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- 팀원의 맛집 순위표 -->
+			<div id="recommand">
+				<div id="team1" class="team">
+					<div>
+						<img src="profile.png" alt="" />
+						<p>팀원1</p>
+					</div>
+					<table>
+						<tr>
+							<td>test1</td>
+							<td>test1</td>
+							<td>test1</td>
+						</tr>
+					</table>
+				</div>
+				<div id="team2" class="team">
+					<div>
+						<img src="profile.png" alt="" />
+						<p>팀원2</p>
+					</div>
+				</div>
+				<div id="team3" class="team">
+					<div>
+						<img src="profile.png" alt="" />
+						<p>팀원3</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<!-- 팀원별 맛집 추천 순위 -->
+		</footer>
+	</body>
+</html>
