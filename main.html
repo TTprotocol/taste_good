@@ -4,167 +4,9 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>멋진맛집</title>
-
-		<style>
-			body {
-				width: 100%;
-			}
-			header {
-				width: 90%;
-				height: 250px;
-				border: 1px solid red;
-				box-sizing: border-box;
-				margin: 30px auto;
-				padding: 20px;
-			}
-			#bannerWrap {
-				width: 100%;
-				height: 100%;
-				border: 1px solid blue;
-				margin: 0 auto;
-				border-radius: 30px;
-			}
-			#banner {
-				width: 300%;
-				height: 100%;
-				border: 1px solid green;
-				display: flex;
-			}
-			.bannerImg {
-				width: 33.3333%;
-				height: 100%;
-				border: 1px solid red;
-			}
-
-			section {
-				width: 90%;
-				height: 450px;
-				border: 1px solid red;
-				margin: 30px auto;
-				box-sizing: border-box;
-			}
-
-			#category {
-				width: 100%;
-				height: 50px;
-				/* border: 1px solid orange; */
-				/* padding: 20px; */
-				box-sizing: border-box;
-				margin-bottom: 10px;
-			}
-
-			#category tr td {
-				width: 18%;
-				text-align: center;
-				/* border: 1px solid blue; */
-				border-radius: 100%;
-				margin: 20px;
-				padding: 30px;
-			}
-
-			#category tr td img {
-				width: 50%;
-			}
-
-			#recommand {
-				width: 100%;
-				height: 250px;
-				border: 1px solid blue;
-				padding: 20px;
-				display: flex;
-				box-sizing: border-box;
-			}
-
-			.team {
-				width: 33.333%;
-				border: 1px solid green;
-				margin: 15px;
-				text-align: center;
-				overflow: hidden;
-				display: flex;
-			}
-
-			.team div {
-				width: 100%;
-				display: flex;
-				flex-direction: column;
-				align-items: center; /* 왼쪽 정렬 */
-			}
-
-			.team img {
-				width: 20%;
-				/* margin: 10px 10px 0 10px;
-				display: inline-block; */
-				margin-top: 10px;
-				margin-bottom: 10px;
-				transition: width 0.3s ease-in-out;
-			}
-
-			.team p {
-				width: 100%;
-				text-align: center;
-			}
-
-			.list {
-				display: none;
-			}
-		</style>
-
+		<link rel="stylesheet" href="style.css" />
 		<script src="jquery-1.12.3.js"></script>
-		<script>
-			$(document).ready(function () {
-				let count = 0;
-
-				// 배너 이미지 슬라이드
-				setInterval(function () {
-					if (count >= 2) count = 0;
-					else count++;
-
-					$("#banner").css({
-						marginLeft: -100 * count + "%",
-					});
-				}, 3000);
-
-				// recommand 마우스 오버시 추천 리스트 출력
-				$(".team").mouseover(function () {
-					$(this)
-						.css({
-							width: "100%",
-							display: "flex",
-						})
-						.siblings(".team")
-						.css({
-							display: "none",
-						});
-
-					$(this).children("div").css({
-						width: "30%",
-					});
-
-					$(this).children(".list").css({
-						display: "block",
-						width: "70%",
-						border: "1px solid red",
-					});
-				});
-
-				// recommand 마우스 아웃시 추천 리스트 숨김
-				$(".team").mouseleave(function () {
-					$(".team").css({
-						width: "33.333%",
-						display: "block",
-					});
-
-					$(this).children("div").css({
-						width: "100%",
-					});
-
-					$(this).children(".list").css({
-						display: "none",
-					});
-				});
-			});
-		</script>
+		<script src="script.js"></script>
 	</head>
 	<body>
 		<header>
@@ -197,7 +39,12 @@
 						<img src="profile.png" alt="" />
 						<p>팀원1</p>
 					</div>
-					<table class="list">
+					<table class="list" border="1">
+						<tr>
+							<th>test1</th>
+							<th>test1</th>
+							<th>test1</th>
+						</tr>
 						<tr>
 							<td>test1</td>
 							<td>test1</td>

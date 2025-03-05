@@ -1,0 +1,103 @@
+/* body 크기 지정 */
+body {
+	width: 100%;
+}
+header {
+	width: 90%;
+	height: 250px;
+	border: 1px solid red;
+	box-sizing: border-box;
+	margin: 30px auto;
+	padding: 20px;
+}
+#bannerWrap {
+	width: 100%;
+	height: 100%;
+	border: 1px solid blue;
+	margin: 0 auto;
+	border-radius: 30px;
+}
+#banner {
+	width: 300%;
+	height: 100%;
+	border: 1px solid green;
+	display: flex;
+}
+.bannerImg {
+	width: 33.3333%;
+	height: 100%;
+	border: 1px solid red;
+}
+
+section {
+	width: 90%;
+	height: 450px;
+	border: 1px solid red;
+	margin: 30px auto;
+	box-sizing: border-box;
+}
+
+#category {
+	width: 100%;
+	height: 50px;
+	/* border: 1px solid orange; */
+	/* padding: 20px; */
+	box-sizing: border-box;
+	margin-bottom: 10px;
+}
+
+#category tr td {
+	width: 18%;
+	text-align: center;
+	/* border: 1px solid blue; */
+	border-radius: 100%;
+	margin: 20px;
+	padding: 30px;
+}
+
+#category tr td img {
+	width: 50%;
+}
+
+#recommand {
+	width: 100%;
+	height: 250px;
+	border: 1px solid blue;
+	padding: 20px;
+	display: flex;
+	box-sizing: border-box;
+}
+
+.team {
+	width: 33.333%;
+	border: 1px solid green;
+	margin: 15px;
+	text-align: center;
+	overflow: hidden;
+	display: flex;
+}
+
+.team div {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.team img {
+	width: 20%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	transition: width 0.3s ease-in-out;
+}
+
+.team p {
+	width: 100%;
+	text-align: center;
+}
+
+.list {
+    width: 70%;
+    border: 1px solid red
+	display: none;
+}
