@@ -1,11 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>수퍼슬라이더스</title>
+    <style>
+      #pictures {
+        width: 300%;
+        height: 100%;
+        border: 1px solid red;
+        display: flex;
+      }
+      #re_name {
+        font-size: 50px;
+        font-weight: 1000;
+        /* font-style: italic; */
+      }
+      #re_time {
+        font-size: 20px;
+      }
+      .pic {
+        width: 300px;
+        height: 300px;
+      }
+      h1 {
+        font-size: 30px;
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="pictures">
+        <div class="pic">pic1</div>
+        <div class="pic">pic2</div>
+        <div class="pic">pic3</div>
+        <div class="pic">map</div>
+      </div>
+    </header>
+    <br /><br />
+    <section>
+      <article id="re_name">수퍼슬라이더스</article>
+      <article id="re_time">
+        11:30 - 21:00, <b>수요일 휴무,</b> 14:40 - 17:00 브레이크타임
+      </article>
+      <article id="re_menu">
+        <h1>추천 메뉴</h1>
+        <table border="1">
+          <tr>
+            <th>부바검프쉬림프</th>
+            <td rowspan="2">조그만 미니버거<br/>맛있어요 전 원래 새우를 좋아해요</td>
+          </tr>
+          <tr>
+            <td>사진</td>
+          </tr>
+          <tr>
+            <th>버드맨</th>
+            <td rowspan="2">매콤한 치킨버거도 드셔보세요</td>
+          </tr>
+          <tr>
+            <td>사진</td>
+          </tr>
+          <tr>
+            <th>원초적본능II</th>
+            <td rowspan="2">수퍼슬라이더스의 대표 메뉴</td>
+          </tr>
+          <tr>
+            <td>사진</td>
+          </tr>
+        </table>
+      </article>
+    </section>
+    <footer>
+      <p>수퍼슬라이더스는 건대 근처라 조금 걸어가야 해요<br/>
+    저녁 메뉴로 추천할게요. ㅎㅎ</p>
+    </footer>
+  </body>
 </html>
