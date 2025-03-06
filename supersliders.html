@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>미태리</title>
+    <title>수퍼슬라이더스</title>
     <style>
       header {
         margin: 0 0 30px;
@@ -24,12 +24,18 @@
         box-sizing: border-box;
         transition: 1s;
       }
+      #re_name {
+        font-size: 50px;
+        font-weight: 1000;
+        /* font-style: italic; */
+      }
+      #re_time {
+        font-size: 20px;
+      }
       .pic {
         width: 33.3333%;
         height: 100%;
-        /* border: 1px solid blue; */
       }
-
       .arrow {
         width: 50px;
         height: 50px;
@@ -49,36 +55,23 @@
         border-radius: 50px;
         background-color: white;
       }
-
       section {
         width: 95%;
         margin: 20px auto;
         padding: 20px;
       }
-
-      .image {
-        width: 240px;
-        height: 300px;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
-
-      #re_name {
-        font-size: 50px;
-        font-weight: 1000;
-        /* font-style: italic; */
-      }
-      #re_time {
-        font-size: 20px;
-      }
       h1 {
         font-size: 30px;
         font-weight: 400;
       }
-
+      .image {
+        width: 240px;
+        height: 300px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
       #review {
         width: 100%;
       }
@@ -117,11 +110,10 @@
     <header>
       <div id="pictures">
         <img id="left" class="arrow" src="left.png" alt="#" onclick="left()" />
-
         <div id="pictures">
-          <div class="pic"><img src="./mitaly/mitaly_main1.png" alt="#" /></div>
-          <div class="pic"><img src="./mitaly/mitaly_main2.png" alt="#" /></div>
-          <div class="pic"><img src="./mitaly/mitaly_map.png" alt="#" /></div>
+          <div class="pic"><img src="./super/super_main1.png" /></div>
+          <div class="pic"><img src="./super/super_main2.png" /></div>
+          <div class="pic"><img src="./super/super_map.png" /></div>
         </div>
         <img
           id="right"
@@ -132,11 +124,10 @@
         />
       </div>
     </header>
-    <br /><br />
     <section>
-      <article id="re_name">미태리</article>
+      <article id="re_name">수퍼슬라이더스</article>
       <article id="re_time">
-        11:00 - 21:00, <b>금요일 휴무,</b> 15:00 - 16:30 브레이크타임
+        11:30 - 21:00, <b>수요일 휴무,</b> 14:40 - 17:00 브레이크타임
       </article>
       <article id="re_menu">
         <ul>
@@ -144,72 +135,37 @@
             <h1>추천 메뉴</h1>
             <table border="1">
               <tr>
-                <th colspan="2">베이컨 까르보나라</th>
-                <th colspan="2">감바스파스타</th>
-                <th colspan="2">올데이세트</th>
+                <th colspan="2">부바검프쉬림프</th>
+                <th colspan="2">버드맨</th>
+                <th colspan="2">원초적본능II</th>
               </tr>
               <tr>
                 <td>
                   <div class="image">
-                    <img src="./mitaly/mitaly_menu_bacon.png" alt="" />
+                    <img src="./super/super_menu_boobagumpslider.png" />
                   </div>
                 </td>
-                <td>무난하게 먹기 좋아요</td>
+                <td>조그만 미니버거<br />맛있어요 전 원래 새우를 좋아해요</td>
                 <td>
                   <div class="image">
-                    <img src="./mitaly/mitaly_menu_gambas.png" alt="" />
+                    <img src="./super/super_menu_birdman.png" />
                   </div>
                 </td>
-                <td>
-                  미태리 시그니처<br />
-                  맛있긴 한데 다 먹고 나면 김치찌개 땡겨요 ㅋㅋㅎ;;
-                </td>
+                <td>매콤한 치킨버거도 드셔보세요</td>
                 <td>
                   <div class="image">
-                    <img src="./mitaly/mitaly_menu_alldayset.png" alt="" />
+                    <img src="./super/super_menu_basicinstinct2.png" />
                   </div>
                 </td>
-                <td>이것저것 먹고 싶을 때 친구랑 가서 드셔보세요^~^</td>
-              </tr>
-            </table>
-          </li>
-          <li>
-            <h1>생생후기. . .</h1>
-            <table id="review" border="1">
-              <tr>
-                <th></th>
-                <th>맛</th>
-                <th>거리</th>
-                <th>청결</th>
-                <th>식곤증</th>
-                <th>재방문의사</th>
-                <th>한줄평</th>
-              </tr>
-              <tr>
-                <td>팀원1</td>
-                <td>4</td>
-                <td>3</td>
-                <td>4</td>
-                <td>3</td>
-                <td>4</td>
-                <td>사람이 많지 않아 좋았고 맛도 있었습니다!</td>
-              </tr>
-              <tr>
-                <td>팀원2</td>
-                <td>4</td>
-                <td>4</td>
-                <td>5</td>
-                <td>3</td>
-                <td>4</td>
-                <td>전체적으로 하얀 톤이라 청결해보입니다. 세트 구성 꽤괜</td>
+                <td>수퍼슬라이더스의 대표 메뉴</td>
               </tr>
             </table>
           </li>
           <li>
             <h1>종합평</h1>
             <h3>
-              근처에서 양식 먹고 싶다면 추천! 개인적으로 근처에 있는 알고보다
-              미태리가 맛있었어요
+              수퍼슬라이더스는 건대 근처라 조금 걸어가야 해요<br />
+              저녁 메뉴로 추천할게요. ㅎㅎ
             </h3>
           </li>
         </ul>
