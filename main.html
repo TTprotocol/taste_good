@@ -13,9 +13,9 @@
 			<!-- 맛집 배너 -->
 			<div id="bannerWrap">
 				<div id="banner">
-					<div class="bannerImg">1<img src="제목 없음.png" alt="#" /></div>
-					<div class="bannerImg">2<img src="제목 없음.png" alt="#" /></div>
-					<div class="bannerImg">3<img src="제목 없음.png" alt="#" /></div>
+					<div class="bannerImg"><img src="제목 없음.png" alt="#" /></div>
+					<div class="bannerImg"><img src="제목 없음.png" alt="#" /></div>
+					<div class="bannerImg"><img src="제목 없음.png" alt="#" /></div>
 				</div>
 			</div>
 		</header>
@@ -245,39 +245,50 @@
 
 		<footer>
 			<form>
-				<div>
-					<table id="reviewList" border="1">
+				<fieldset>
+					<legend>한줄평 작성</legend>
+					<table id="reviewWrite" border="1">
 						<tr>
-							<th>작성자</th>
-							<th>별점</th>
-							<th>내용</th>
+							<td id="starCell">
+								<label for="star">별점</label>
+								<select name="star" id="star">
+									<option value="1">&starf;</option>
+									<option value="2">&starf;&starf;</option>
+									<option value="3">&starf;&starf;&starf;</option>
+									<option value="4">&starf;&starf;&starf;&starf;</option>
+									<option value="5">&starf;&starf;&starf;&starf;&starf;</option>
+								</select>
+							</td>
+							<td id="idCell">
+								<label for="id">작성자</label>
+								<input id="id" type="text" name="작성자" />
+							</td>
+							<td>
+								<input
+									id="submit"
+									type="button"
+									value="제출하기"
+									onclick="writeReview()"
+								/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3">
+								<textarea name="review" id="review"></textarea>
+							</td>
 						</tr>
 					</table>
-				</div>
-				<table id="reviewWrite">
+				</fieldset>
+			</form>
+			<div id="reviewWrap">
+				<table id="reviewList" border="1">
 					<tr>
-						<td>
-							<select name="star" id="star">
-								<option value="1">&starf;</option>
-								<option value="2">&starf;&starf;</option>
-								<option value="3">&starf;&starf;</option>
-								<option value="4">&starf;&starf;&starf;&starf;</option>
-								<option value="5">&starf;&starf;&starf;&starf;&starf;</option>
-							</select>
-						</td>
-						<td>
-							<label for="id">작성자</label>
-							<input id="id" type="text" name="작성자" />
-						</td>
-						<td>
-							<textarea name="review" id="review"></textarea>
-						</td>
-						<td>
-							<input type="button" value="제출하기" onclick="writeReview()" />
-						</td>
+						<th>작성자</th>
+						<th>별점</th>
+						<th>내용</th>
 					</tr>
 				</table>
-			</form>
+			</div>
 		</footer>
 	</body>
 </html>

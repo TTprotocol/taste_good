@@ -16,6 +16,7 @@ $(document).ready(function () {
 		$(this)
 			.css({
 				width: "100%",
+				// height: "100%",
 				display: "flex",
 			})
 			.siblings(".team")
@@ -27,6 +28,7 @@ $(document).ready(function () {
 			.children("div")
 			.css({
 				width: "30%",
+				// height: "100%",
 			})
 			.children(".profile")
 			.css({
@@ -42,6 +44,7 @@ $(document).ready(function () {
 	$(".team").mouseleave(function () {
 		$(".team").css({
 			width: "33.333%",
+			height: "100%",
 			display: "block",
 		});
 
@@ -49,10 +52,12 @@ $(document).ready(function () {
 			.children("div")
 			.css({
 				width: "100%",
+				height: "200%",
 			})
 			.children(".profile")
 			.css({
-				width: "20%",
+				width: "35%",
+				height: "30%",
 			});
 
 		$(this).children(".list").css({
@@ -65,11 +70,6 @@ function writeReview() {
 	let star = $("#star").val();
 	let user = $("#id").val();
 	let review = $("#review").val();
-
-	console.log("star : ", star);
-	console.log("user : ", user);
-	console.log("review : ", review);
-
 	let starCount = "";
 
 	for (let i = 0; i < star; i++) {
@@ -85,4 +85,7 @@ function writeReview() {
 			review +
 			"</td></tr>"
 	);
+
+	$("#id").val("");
+	$("#review").val("");
 }
