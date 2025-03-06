@@ -23,9 +23,15 @@ $(document).ready(function () {
 				display: "none",
 			});
 
-		$(this).children("div").css({
-			width: "30%",
-		});
+		$(this)
+			.children("div")
+			.css({
+				width: "30%",
+			})
+			.children(".profile")
+			.css({
+				width: "30%",
+			});
 
 		$(this).children(".list").css({
 			display: "block",
@@ -39,12 +45,44 @@ $(document).ready(function () {
 			display: "block",
 		});
 
-		$(this).children("div").css({
-			width: "100%",
-		});
+		$(this)
+			.children("div")
+			.css({
+				width: "100%",
+			})
+			.children(".profile")
+			.css({
+				width: "20%",
+			});
 
 		$(this).children(".list").css({
 			display: "none",
 		});
 	});
 });
+
+function writeReview() {
+	let star = $("#star").val();
+	let user = $("#id").val();
+	let review = $("#review").val();
+
+	console.log("star : ", star);
+	console.log("user : ", user);
+	console.log("review : ", review);
+
+	let starCount = "";
+
+	for (let i = 0; i < star; i++) {
+		starCount += "&starf;";
+	}
+
+	$("#reviewList").append(
+		"<tr><td>" +
+			user +
+			"</td><td>" +
+			starCount +
+			'</td><td colspan="2">' +
+			review +
+			"</td></tr>"
+	);
+}
