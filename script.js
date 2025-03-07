@@ -76,16 +76,18 @@ function writeReview() {
 		starCount += "&starf;";
 	}
 
-	$("#reviewList").append(
-		"<tr><td>" +
-			user +
-			"</td><td>" +
-			starCount +
-			'</td><td colspan="2">' +
-			review +
-			"</td></tr>"
-	);
+	if (user !== "" && review !== "") {
+		$("#reviewList").append(
+			"<tr><td>" +
+				user +
+				"</td><td>" +
+				starCount +
+				'</td><td colspan="2">' +
+				review +
+				"</td></tr>"
+		);
 
-	$("#id").val("");
-	$("#review").val("");
+		$("#id").val("");
+		$("#review").val("");
+	}
 }
