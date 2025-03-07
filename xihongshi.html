@@ -1,259 +1,259 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>시홍쓰</title>
-    <style>
-      header {
-        margin: 0 0 30px;
-      }
-      #picture {
-        width: 95%;
-        height: 400px;
-        border: 1px solid black;
-        margin: 20px auto;
-        padding: 20px;
-        overflow: hidden;
-        position: relative;
-      }
-      #pictures {
-        width: 300%;
-        height: 400px;
-        display: flex;
-        box-sizing: border-box;
-        transition: 1s;
-      }
-      .pic {
-        width: 33.3333%;
-        height: 100%;
-        /* border: 1px solid blue; */
-      }
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>시홍쓰</title>
+		<style>
+			header {
+				margin: 0 0 30px;
+			}
+			#picture {
+				width: 95%;
+				height: 400px;
+				border: 1px solid black;
+				margin: 20px auto;
+				padding: 20px;
+				overflow: hidden;
+				position: relative;
+			}
+			#pictures {
+				width: 300%;
+				height: 400px;
+				display: flex;
+				box-sizing: border-box;
+				transition: 1s;
+			}
+			.pic {
+				width: 33.3333%;
+				height: 100%;
+				/* border: 1px solid blue; */
+			}
 
-      .arrow {
-        width: 50px;
-        height: 50px;
-        position: absolute;
-      }
-      #left {
-        left: 10px;
-        top: 50%;
-        border: 1px solid black;
-        border-radius: 50px;
-        background-color: white;
-      }
-      #right {
-        right: 10px;
-        top: 50%;
-        border: 1px solid black;
-        border-radius: 50px;
-        background-color: white;
-      }
+			.arrow {
+				width: 50px;
+				height: 50px;
+				position: absolute;
+			}
+			#left {
+				left: 10px;
+				top: 50%;
+				border: 1px solid black;
+				border-radius: 50px;
+				background-color: white;
+			}
+			#right {
+				right: 10px;
+				top: 50%;
+				border: 1px solid black;
+				border-radius: 50px;
+				background-color: white;
+			}
 
-      section {
-        width: 95%;
-        margin: 20px auto;
-        padding: 20px;
-      }
+			section {
+				width: 95%;
+				margin: 20px auto;
+				padding: 20px;
+			}
 
-      .image {
-        width: 240px;
-        height: 300px;
-      }
+			.image {
+				width: 240px;
+				height: 300px;
+			}
 
-      img {
-        width: 100%;
-        height: 100%;
-      }
+			img {
+				width: 100%;
+				height: 100%;
+			}
 
-      #re_name {
-        font-size: 50px;
-        font-weight: 1000;
-        font-style: italic;
-        color: red;
-        text-shadow: 4px 4px 4px yellow;
-      }
-      #re_time {
-        font-size: 20px;
-      }
-      h1 {
-        font-size: 30px;
-        font-weight: 400;
-      }
+			#re_name {
+				font-size: 50px;
+				font-weight: 1000;
+				font-style: italic;
+				color: red;
+				text-shadow: 4px 4px 4px yellow;
+			}
+			#re_time {
+				font-size: 20px;
+			}
+			h1 {
+				font-size: 30px;
+				font-weight: 400;
+			}
 
-      #review {
-        width: 100%;
-      }
-      #review tr > th {
-        text-align: center;
-        padding: 10px;
-      }
-      #review tr td {
-        padding: 10px;
-      }
-    </style>
-    <script src="jquery-1.12.3.js"></script>
-    <script>
-      let count = 0;
-      function left() {
-        console.log('tset1');
-        if (count <= 0) count = 2;
-        else count--;
+			#review {
+				width: 100%;
+			}
+			#review tr > th {
+				text-align: center;
+				padding: 10px;
+			}
+			#review tr td {
+				padding: 10px;
+			}
+		</style>
+		<script src="jquery-1.12.3.js"></script>
+		<script>
+			let count = 0;
+			function left() {
+				console.log("tset1");
+				if (count <= 0) count = 2;
+				else count--;
 
-        $('#pictures').css({
-          marginLeft: -100 * count + '%',
-        });
-      }
-      function right() {
-        console.log('tset2');
-        if (count >= 2) count = 0;
-        else count++;
+				$("#pictures").css({
+					marginLeft: -100 * count + "%",
+				});
+			}
+			function right() {
+				console.log("tset2");
+				if (count >= 2) count = 0;
+				else count++;
 
-        $('#pictures').css({
-          marginLeft: -100 * count + '%',
-        });
-      }
-    </script>
-  </head>
-  <body>
-    <header>
-      <div id="picture">
-        <img id="left" class="arrow" src="left.png" alt="#" onclick="left()" />
+				$("#pictures").css({
+					marginLeft: -100 * count + "%",
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<div id="picture">
+				<img id="left" class="arrow" src="left.png" alt="#" onclick="left()" />
 
-        <div id="pictures">
-          <div class="pic">
-            <img src="./sihongss/sihongss_main1.png" alt="#" />
-          </div>
-          <div class="pic">
-            <img src="./sihongss/sihongss_main2.png" alt="#" />
-          </div>
-          <div class="pic">
-            <img src="./sihongss/sihongss_main3.png" alt="#" />
-          </div>
-          <div class="pic">
-            <img src="./sihongss/sihongss_map.png" alt="#" />
-          </div>
-        </div>
-        <img
-          id="right"
-          class="arrow"
-          src="right.png"
-          alt="#"
-          onclick="right()"
-        />
-      </div>
-    </header>
-    <section>
-      <article id="re_name">시홍쓰</article>
-      <article id="re_time">
-        11:30 - 20:30, <b>일요일 휴무,</b> 14:30 - 17:00 브레이크타임
-      </article>
-      <article id="re_menu">
-        <ul>
-          <li>
-            <h1>추천 메뉴</h1>
-            <table border="1">
-              <tr>
-                <th colspan="2">토마토계란덮밥</th>
-                <th colspan="2">마파가지튀김</th>
-                <th colspan="2">마파두부밥</th>
-                <th colspan="2">고기튀김</th>
-              </tr>
-              <tr>
-                <td>
-                  <div class="image">
-                    <img src="./sihongss/sihongss_menu_egg.png" alt="" />
-                  </div>
-                </td>
-                <td>
-                  불맛🔥이 살아있는 토마토계란덮밥<br />
-                  제가 먹어봤던 토계밥 중 단연코 1위<br />당연함 여기서밖에 안
-                  먹어봤으니까요<br />
-                  지인들 오면 1순위로 데려가는 식당의 1위 메뉴。 맛있습니다
-                </td>
+				<div id="pictures">
+					<div class="pic">
+						<img src="./sihongss/sihongss_main1.png" alt="#" />
+					</div>
+					<div class="pic">
+						<img src="./sihongss/sihongss_main2.png" alt="#" />
+					</div>
+					<div class="pic">
+						<img src="./sihongss/sihongss_main3.png" alt="#" />
+					</div>
+					<div class="pic">
+						<img src="./sihongss/sihongss_map.png" alt="#" />
+					</div>
+				</div>
+				<img
+					id="right"
+					class="arrow"
+					src="right.png"
+					alt="#"
+					onclick="right()"
+				/>
+			</div>
+		</header>
+		<section>
+			<article id="re_name">시홍쓰</article>
+			<article id="re_time">
+				11:30 - 20:30, <b>일요일 휴무,</b> 14:30 - 17:00 브레이크타임
+			</article>
+			<article id="re_menu">
+				<ul>
+					<li>
+						<h1>추천 메뉴</h1>
+						<table border="1">
+							<tr>
+								<th colspan="2">토마토계란덮밥</th>
+								<th colspan="2">마파가지튀김</th>
+								<th colspan="2">마파두부밥</th>
+								<th colspan="2">고기튀김</th>
+							</tr>
+							<tr>
+								<td>
+									<div class="image">
+										<img src="./sihongss/sihongss_menu_egg.png" alt="" />
+									</div>
+								</td>
+								<td>
+									불맛🔥이 살아있는 토마토계란덮밥<br />
+									제가 먹어봤던 토계밥 중 단연코 1위<br />당연함 여기서밖에 안
+									먹어봤으니까요<br />
+									지인들 오면 1순위로 데려가는 식당의 1위 메뉴。 맛있습니다
+								</td>
 
-                <td>
-                  <div class="image">
-                    <img src="./sihongss/sihongss_menu_gaji.png" alt="" />
-                  </div>
-                </td>
-                <td>
-                  저는 가지싫어인간이었어요<br />시홍쓰에서가지가얼마나맛있는음식인지알게되었습니다밥리필가능하니까리필해서드세요
-                </td>
+								<td>
+									<div class="image">
+										<img src="./sihongss/sihongss_menu_gaji.png" alt="" />
+									</div>
+								</td>
+								<td>
+									저는 가지싫어인간이었어요<br />시홍쓰에서가지가얼마나맛있는음식인지알게되었습니다밥리필가능하니까리필해서드세요
+								</td>
 
-                <td>
-                  <div class="image">
-                    <img src="./sihongss/sihongss_menu_tofu.png" alt="" />
-                  </div>
-                </td>
-                <td>
-                  두부가 부드럽고 맛있어요<br />마파가지튀김의 두부 버전입니다
-                </td>
+								<td>
+									<div class="image">
+										<img src="./sihongss/sihongss_menu_tofu.png" alt="" />
+									</div>
+								</td>
+								<td>
+									두부가 부드럽고 맛있어요<br />마파가지튀김의 두부 버전입니다
+								</td>
 
-                <td>
-                  <div class="image">
-                    <img src="./sihongss/sihongss_menu_gogi.png" alt="" />
-                  </div>
-                </td>
-                <td>맛있어요</td>
-              </tr>
-            </table>
-          </li>
-          <li>
-            <h1>생생후기. . .</h1>
-            <table id="review" border="1">
-              <tr>
-                <th></th>
-                <th>맛</th>
-                <th>거리</th>
-                <th>청결</th>
-                <th>식곤증</th>
-                <th>재방문의사</th>
-                <th>한줄평</th>
-              </tr>
-              <tr>
-                <td>팀원1</td>
-                <td>5</td>
-                <td>5</td>
-                <td>4.5</td>
-                <td>3.5</td>
-                <td>5</td>
-                <td>
-                  의심해서 미안! 토계밥 최고! <br />
-                  수료하기전까지 제일 많이 갈거 같아요 ㅋㅋ;
-                </td>
-              </tr>
-              <tr>
-                <td>팀원2</td>
-                <td>5</td>
-                <td>4</td>
-                <td>4</td>
-                <td>2</td>
-                <td>10</td>
-                <td>저는 스무번도 넘게 먹었어요</td>
-              </tr>
-              <tr>
-                <td>팀원3</td>
-                <td>5</td>
-                <td>4</td>
-                <td>5</td>
-                <td>4</td>
-                <td>5</td>
-                <td>불향이 나고 과장해서 고기맛이 나는 토계밥</td>
-              </tr>
-            </table>
-          </li>
-          <li>
-            <h1>기타</h1>
-            <h3>
-              화양동에 오셨다면 한 번쯤 가봐야할 밥집이라고 생각합니다(아닐수도)
-              웨이팅이 기니까 미리 캐치테이블로 웨이팅 걸어두세요! 매장이 좁아서
-              모르는 사람과 합석할 수 있습니다 Oops。
-            </h3>
-          </li>
-        </ul>
-      </article>
-    </section>
-    <footer></footer>
-  </body>
+								<td>
+									<div class="image">
+										<img src="./sihongss/sihongss_menu_gogi.png" alt="" />
+									</div>
+								</td>
+								<td>맛있어요</td>
+							</tr>
+						</table>
+					</li>
+					<li>
+						<h1>생생후기. . .</h1>
+						<table id="review" border="1">
+							<tr>
+								<th></th>
+								<th>맛</th>
+								<th>거리</th>
+								<th>청결</th>
+								<th>식곤증</th>
+								<th>재방문의사</th>
+								<th>한줄평</th>
+							</tr>
+							<tr>
+								<td>팀원1</td>
+								<td>5</td>
+								<td>5</td>
+								<td>4.5</td>
+								<td>3.5</td>
+								<td>5</td>
+								<td>
+									의심해서 미안! 토계밥 최고! <br />
+									수료하기전까지 제일 많이 갈거 같아요 ㅋㅋ;
+								</td>
+							</tr>
+							<tr>
+								<td>팀원2</td>
+								<td>5</td>
+								<td>4</td>
+								<td>4</td>
+								<td>2</td>
+								<td>10</td>
+								<td>저는 스무번도 넘게 먹었어요</td>
+							</tr>
+							<tr>
+								<td>팀원3</td>
+								<td>5</td>
+								<td>4</td>
+								<td>5</td>
+								<td>4</td>
+								<td>5</td>
+								<td>불향이 나고 과장해서 고기맛이 나는 토계밥</td>
+							</tr>
+						</table>
+					</li>
+					<li>
+						<h1>기타</h1>
+						<h3>
+							화양동에 오셨다면 한 번쯤 가봐야할 밥집이라고 생각합니다(아닐수도)
+							웨이팅이 기니까 미리 캐치테이블로 웨이팅 걸어두세요! 매장이 좁아서
+							모르는 사람과 합석할 수 있습니다 Oops。
+						</h3>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<footer></footer>
+	</body>
 </html>

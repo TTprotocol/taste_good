@@ -1,176 +1,176 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>수퍼슬라이더스</title>
-    <style>
-      header {
-        margin: 0 0 30px;
-      }
-      #picture {
-        width: 95%;
-        height: 400px;
-        border: 1px solid black;
-        margin: 20px auto;
-        padding: 20px;
-        overflow: hidden;
-        position: relative;
-      }
-      #pictures {
-        width: 300%;
-        height: 400px;
-        display: flex;
-        box-sizing: border-box;
-        transition: 1s;
-      }
-      #re_name {
-        font-size: 50px;
-        font-weight: 1000;
-        /* font-style: italic; */
-      }
-      #re_time {
-        font-size: 20px;
-      }
-      .pic {
-        width: 33.3333%;
-        height: 100%;
-      }
-      .arrow {
-        width: 50px;
-        height: 50px;
-        position: absolute;
-      }
-      #left {
-        left: 10px;
-        top: 50%;
-        border: 1px solid black;
-        border-radius: 50px;
-        background-color: white;
-      }
-      #right {
-        right: 10px;
-        top: 50%;
-        border: 1px solid black;
-        border-radius: 50px;
-        background-color: white;
-      }
-      section {
-        width: 95%;
-        margin: 20px auto;
-        padding: 20px;
-      }
-      h1 {
-        font-size: 30px;
-        font-weight: 400;
-      }
-      .image {
-        width: 240px;
-        height: 300px;
-      }
-      img {
-        width: 100%;
-        height: 100%;
-      }
-      #review {
-        width: 100%;
-      }
-      #review tr > th {
-        text-align: center;
-        padding: 10px;
-      }
-      #review tr td {
-        padding: 10px;
-      }
-    </style>
-    <script src="jquery-1.12.3.js"></script>
-    <script>
-      let count = 0;
-      function left() {
-        console.log('tset1');
-        if (count <= 0) count = 2;
-        else count--;
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>수퍼슬라이더스</title>
+		<style>
+			header {
+				margin: 0 0 30px;
+			}
+			#picture {
+				width: 95%;
+				height: 400px;
+				border: 1px solid black;
+				margin: 20px auto;
+				padding: 20px;
+				overflow: hidden;
+				position: relative;
+			}
+			#pictures {
+				width: 300%;
+				height: 400px;
+				display: flex;
+				box-sizing: border-box;
+				transition: 1s;
+			}
+			#re_name {
+				font-size: 50px;
+				font-weight: 1000;
+				/* font-style: italic; */
+			}
+			#re_time {
+				font-size: 20px;
+			}
+			.pic {
+				width: 33.3333%;
+				height: 100%;
+			}
+			.arrow {
+				width: 50px;
+				height: 50px;
+				position: absolute;
+			}
+			#left {
+				left: 10px;
+				top: 50%;
+				border: 1px solid black;
+				border-radius: 50px;
+				background-color: white;
+			}
+			#right {
+				right: 10px;
+				top: 50%;
+				border: 1px solid black;
+				border-radius: 50px;
+				background-color: white;
+			}
+			section {
+				width: 95%;
+				margin: 20px auto;
+				padding: 20px;
+			}
+			h1 {
+				font-size: 30px;
+				font-weight: 400;
+			}
+			.image {
+				width: 240px;
+				height: 300px;
+			}
+			img {
+				width: 100%;
+				height: 100%;
+			}
+			#review {
+				width: 100%;
+			}
+			#review tr > th {
+				text-align: center;
+				padding: 10px;
+			}
+			#review tr td {
+				padding: 10px;
+			}
+		</style>
+		<script src="jquery-1.12.3.js"></script>
+		<script>
+			let count = 0;
+			function left() {
+				console.log("tset1");
+				if (count <= 0) count = 2;
+				else count--;
 
-        $('#pictures').css({
-          marginLeft: -100 * count + '%',
-        });
-      }
-      function right() {
-        console.log('tset2');
-        if (count >= 2) count = 0;
-        else count++;
+				$("#pictures").css({
+					marginLeft: -100 * count + "%",
+				});
+			}
+			function right() {
+				console.log("tset2");
+				if (count >= 2) count = 0;
+				else count++;
 
-        $('#pictures').css({
-          marginLeft: -100 * count + '%',
-        });
-      }
-    </script>
-  </head>
-  <body>
-    <header>
-      <div id="pictures">
-        <img id="left" class="arrow" src="left.png" alt="#" onclick="left()" />
-        <div id="pictures">
-          <div class="pic"><img src="./super/super_main1.png" /></div>
-          <div class="pic"><img src="./super/super_main2.png" /></div>
-          <div class="pic"><img src="./super/super_map.png" /></div>
-        </div>
-        <img
-          id="right"
-          class="arrow"
-          src="right.png"
-          alt="#"
-          onclick="right()"
-        />
-      </div>
-    </header>
-    <section>
-      <article id="re_name">수퍼슬라이더스</article>
-      <article id="re_time">
-        11:30 - 21:00, <b>수요일 휴무,</b> 14:40 - 17:00 브레이크타임
-      </article>
-      <article id="re_menu">
-        <ul>
-          <li>
-            <h1>추천 메뉴</h1>
-            <table border="1">
-              <tr>
-                <th colspan="2">부바검프쉬림프</th>
-                <th colspan="2">버드맨</th>
-                <th colspan="2">원초적본능II</th>
-              </tr>
-              <tr>
-                <td>
-                  <div class="image">
-                    <img src="./super/super_menu_boobagumpslider.png" />
-                  </div>
-                </td>
-                <td>조그만 미니버거<br />맛있어요 전 원래 새우를 좋아해요</td>
-                <td>
-                  <div class="image">
-                    <img src="./super/super_menu_birdman.png" />
-                  </div>
-                </td>
-                <td>매콤한 치킨버거도 드셔보세요</td>
-                <td>
-                  <div class="image">
-                    <img src="./super/super_menu_basicinstinct2.png" />
-                  </div>
-                </td>
-                <td>수퍼슬라이더스의 대표 메뉴</td>
-              </tr>
-            </table>
-          </li>
-          <li>
-            <h1>종합평</h1>
-            <h3>
-              수퍼슬라이더스는 건대 근처라 조금 걸어가야 해요<br />
-              저녁 메뉴로 추천할게요. ㅎㅎ
-            </h3>
-          </li>
-        </ul>
-      </article>
-    </section>
-    <footer></footer>
-  </body>
+				$("#pictures").css({
+					marginLeft: -100 * count + "%",
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<div id="picture">
+				<img id="left" class="arrow" src="left.png" alt="#" onclick="left()" />
+				<div id="pictures">
+					<div class="pic"><img src="./super/super_main1.png" /></div>
+					<div class="pic"><img src="./super/super_main2.png" /></div>
+					<div class="pic"><img src="./super/super_map.png" /></div>
+				</div>
+				<img
+					id="right"
+					class="arrow"
+					src="right.png"
+					alt="#"
+					onclick="right()"
+				/>
+			</div>
+		</header>
+		<section>
+			<article id="re_name">수퍼슬라이더스</article>
+			<article id="re_time">
+				11:30 - 21:00, <b>수요일 휴무,</b> 14:40 - 17:00 브레이크타임
+			</article>
+			<article id="re_menu">
+				<ul>
+					<li>
+						<h1>추천 메뉴</h1>
+						<table border="1">
+							<tr>
+								<th colspan="2">부바검프쉬림프</th>
+								<th colspan="2">버드맨</th>
+								<th colspan="2">원초적본능II</th>
+							</tr>
+							<tr>
+								<td>
+									<div class="image">
+										<img src="./super/super_menu_boobagumpslider.png" />
+									</div>
+								</td>
+								<td>조그만 미니버거<br />맛있어요 전 원래 새우를 좋아해요</td>
+								<td>
+									<div class="image">
+										<img src="./super/super_menu_birdman.png" />
+									</div>
+								</td>
+								<td>매콤한 치킨버거도 드셔보세요</td>
+								<td>
+									<div class="image">
+										<img src="./super/super_menu_basicinstinct2.png" />
+									</div>
+								</td>
+								<td>수퍼슬라이더스의 대표 메뉴</td>
+							</tr>
+						</table>
+					</li>
+					<li>
+						<h1>종합평가</h1>
+						<h3>
+							수퍼슬라이더스는 건대 근처라 조금 걸어가야 해요<br />
+							저녁 메뉴로 추천할게요. ㅎㅎ
+						</h3>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<footer></footer>
+	</body>
 </html>
