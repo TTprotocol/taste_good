@@ -138,18 +138,25 @@ section {
 	width: 5%;
 }
 
+.list tr th:nth-child(2),
+.list tr td:nth-child(2) {
+	display: inline-block;
+	/* border: 1px solid blue; */
+	width: 14%;
+}
+
 .list tr th,
 .list tr td {
 	display: inline-block;
 	/* border: 1px solid blue; */
-	width: 12%;
+	width: 10%;
 }
 
 .list tr th:last-child,
 .list tr td:last-child {
 	display: inline-block;
 	/* border: 1px solid blue; */
-	width: 18%;
+	width: 24%;
 }
 
 footer {

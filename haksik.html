@@ -1,281 +1,290 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>학식</title>
-    <style>
-      header {
-        margin: 0 0 30px;
-      }
-      #picture {
-        width: 95%;
-        height: 400px;
-        border: 1px solid black;
-        margin: 20px auto;
-        padding: 20px;
-        overflow: hidden;
-        position: relative;
-      }
-      #pictures {
-        width: 300%;
-        height: 400px;
-        display: flex;
-        box-sizing: border-box;
-        transition: 1s;
-      }
-      .pic {
-        width: 33.3333%;
-        height: 100%;
-        /* border: 1px solid blue; */
-      }
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>학식</title>
+		<style>
+			header {
+				margin: 0 0 30px;
+			}
+			#picture {
+				width: 95%;
+				height: 400px;
+				border: 1px solid black;
+				margin: 20px auto;
+				padding: 20px;
+				overflow: hidden;
+				position: relative;
+			}
+			#pictures {
+				width: 300%;
+				height: 400px;
+				display: flex;
+				box-sizing: border-box;
+				transition: 1s;
+			}
+			.pic {
+				width: 33.3333%;
+				height: 100%;
+				/* border: 1px solid blue; */
+			}
 
-      .arrow {
-        width: 50px;
-        height: 50px;
-        position: absolute;
-      }
-      #left {
-        left: 10px;
-        top: 50%;
-        border: 1px solid black;
-        border-radius: 50px;
-        background-color: white;
-      }
-      #right {
-        right: 10px;
-        top: 50%;
-        border: 1px solid black;
-        border-radius: 50px;
-        background-color: white;
-      }
+			.arrow {
+				width: 50px;
+				height: 50px;
+				position: absolute;
+			}
+			#left {
+				left: 10px;
+				top: 50%;
+				border: 1px solid black;
+				border-radius: 50px;
+				background-color: white;
+			}
+			#right {
+				right: 10px;
+				top: 50%;
+				border: 1px solid black;
+				border-radius: 50px;
+				background-color: white;
+			}
 
-      section {
-        width: 95%;
-        margin: 20px auto;
-        padding: 20px;
-      }
+			section {
+				width: 95%;
+				margin: 20px auto;
+				padding: 20px;
+			}
 
-      .image {
-        width: 240px;
-        height: 300px;
-      }
+			.image {
+				width: 240px;
+				height: 300px;
+			}
 
-      img {
-        width: 100%;
-        height: 100%;
-      }
+			img {
+				width: 100%;
+				height: 100%;
+			}
 
-      #re_name {
-        font-size: 50px;
-        font-weight: 1000;
-        /* font-style: italic; */
-      }
-      #re_time {
-        font-size: 20px;
-      }
-      h1 {
-        font-size: 30px;
-        font-weight: 400;
-      }
+			#re_name {
+				font-size: 50px;
+				font-weight: 1000;
+				/* font-style: italic; */
+			}
+			#re_time {
+				font-size: 20px;
+			}
+			h1 {
+				font-size: 30px;
+				font-weight: 400;
+			}
 
-      #review {
-        width: 100%;
-      }
-      #review tr > th {
-        text-align: center;
-        padding: 10px;
-      }
-      #review tr td {
-        padding: 10px;
-      }
-      .rest {
-        background-color: rgb(247, 241, 241);
-        border-style: outset;
-        border-radius: 10px;
-        border-width: thin;
-        border-color: aqua;
-        padding: 10px;
-        margin: 10px;
-      }
-    </style>
-    <script src="jquery-1.12.3.js"></script>
-    <script>
-      let count = 0;
-      function left() {
-        console.log('tset1');
-        if (count <= 0) count = 2;
-        else count--;
+			#review {
+				width: 100%;
+			}
+			#review tr > th {
+				text-align: center;
+				padding: 10px;
+			}
+			#review tr td {
+				padding: 10px;
+			}
+			.rest {
+				background-color: rgb(247, 241, 241);
+				border-style: outset;
+				border-radius: 10px;
+				border-width: thin;
+				border-color: aqua;
+				padding: 10px;
+				margin: 10px;
+			}
+		</style>
+		<script src="jquery-1.12.3.js"></script>
+		<script>
+			let count = 0;
+			function left() {
+				console.log("tset1");
+				if (count <= 0) count = 2;
+				else count--;
 
-        $('#pictures').css({
-          marginLeft: -100 * count + '%',
-        });
-      }
-      function right() {
-        console.log('tset2');
-        if (count >= 2) count = 0;
-        else count++;
+				$("#pictures").css({
+					marginLeft: -100 * count + "%",
+				});
+			}
+			function right() {
+				console.log("tset2");
+				if (count >= 2) count = 0;
+				else count++;
 
-        $('#pictures').css({
-          marginLeft: -100 * count + '%',
-        });
-      }
-    </script>
-  </head>
-  <body>
-    <header>
-      <div id="picture">
-        <img id="left" class="arrow" src="left.png" alt="#" onclick="left()" />
+				$("#pictures").css({
+					marginLeft: -100 * count + "%",
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<div id="picture">
+				<img id="left" class="arrow" src="left.png" alt="#" onclick="left()" />
 
-        <div id="pictures">
-          <div class="pic"><img src="./sejong/sejong_main1.png" alt="#" /></div>
-          <div class="pic"><img src="./sejong/sejong_main2.png" alt="#" /></div>
-          <div class="pic"><img src="./sejong/sejong_map.png" alt="#" /></div>
-        </div>
-        <img
-          id="right"
-          class="arrow"
-          src="right.png"
-          alt="#"
-          onclick="right()"
-        />
-      </div>
-    </header>
-    <section>
-      <article id="re_name">건대맛집세종대¿¿¿¿¿</article>
-      <article id="re_time">
-        학생회관 B1 10:30 - 19:00(18:59 라스트오더 아마도,,,)
-        <b>토, 일요일, 공휴일 휴무,</b> 15:00 - 16:30 브레이크타임<br />
-        학생회관????? 정문 들어오자마자 오른쪽에 있는 건물
-      </article>
-      <article id="re_menu">
-        <ul>
-          <li>
-            <h1>추천 메뉴</h1>
-            <table border="1">
-              <tr>
-                <th colspan="2">육회비빔밥</th>
-                <th colspan="2">닭강정 오므라이스</th>
-                <th colspan="2">세종대왕돈까스</th>
-              </tr>
-              <tr>
-                <td>
-                  <div class="image">
-                    <img src="./sejong/sejong_menu_bibim.png" alt="" />
-                  </div>
-                </td>
-                <td>
-                  <i>가격최신업데이트안됨...</i><br />마지막으로 먹었을 때
-                  5000원이던가... 5500원이었나 6000원이었나...<br />맛있어요!
-                  홍석천이원일 유튜브에 나왔고 가성비 굿
-                </td>
-                <td>
-                  <div class="image">
-                    <img src="./sejong/sejong_menu_omu.png" alt="" />
-                  </div>
-                </td>
-                <td>
-                  빨리 나와요 그리고 오므라이스가 맛있어요<br />타이밍 잘 맞으면
-                  맛있는 닭강정을 먹을 수 있답니다
-                </td>
-                <td>
-                  <div class="image">
-                    <img src="./sejong/sejong_menu_don.png" alt="" />
-                  </div>
-                </td>
-                <td>
-                  세종대 왕돈까스<br />세종대왕 돈까스<br />세종VS왕돈까스<br />전
-                  안 먹어봤는데 배고플 때 배부르게 먹고 싶을 때 먹는다고
-                  하더라구요
-                </td>
-              </tr>
-            </table>
-          </li>
-          <li>
-            <h1>생생후기. . .</h1>
-            <table id="review" border="1">
-              <tr>
-                <th></th>
-                <th>맛</th>
-                <th>거리</th>
-                <th>청결</th>
-                <th>식곤증</th>
-                <th>재방문의사</th>
-                <th>한줄평</th>
-              </tr>
-              <tr>
-                <td>팀원1</td>
-                <td>4.3</td>
-                <td>5</td>
-                <td>4.4</td>
-                <td>5</td>
-                <td>4.3</td>
-                <td>
-                  3월의 학생회관 식당에는 사람이 정말정말 많아요<br />
-                  세종대 건국대 한양대 만남의 장소,,,<br />
-                </td>
-              </tr>
-              <tr>
-                <td>팀원2</td>
-                <td>4</td>
-                <td>5</td>
-                <td>5</td>
-                <td>4</td>
-                <td>4.5</td>
-                <td>닭강정 오므라이스 맛있게 잘 먹었습니다</td>
-              </tr>
-            </table>
-          </li>
-          <li>
-            <h1>기타 정보</h1>
-            <p><b>새우튀김알밥</b> 무난하게 맛있음</p>
-            <p>
-              <b>스팸치즈순두부찌개</b> 아는 사람만 아는 존맛 메뉴<br />방금
-              찾아봤는데 사라졌다는 말도 있어서 메뉴에 있다면 한 번쯤
-              드셔보세요~~
-            </p>
-            <p>
-              <b>우삼겹된장찌개</b> 스팸치즈순두부찌개처럼 자주 사라졌다가
-              갑자기 등장하는 메뉴인데 추울 때 비올 때 자주 먹었던 기억이 나네요
-            </p>
-            <p>
-              <b>소금구이덮밥</b> 제가 새내기였을 때 제일 유명했던 메뉴예요<br />소스에
-              고기를 찍어드시면 됩니다... 좀 짤 수 있으니 적당히 찍어야 돼요
-            </p>
-            <p><b>돈까스냉모밀</b> 제친구는맨날이것만먹었어요</p>
-            <p>
-              가끔 <b>럭키비키참치비빔밥</b>, <b>마그마굽네덮밥(?)</b> 이런 알
-              수 없는 메뉴들이 나오는데 생각보다 먹을만 해요<br />가격대는
-              3500~6000원 정도 되는 것 같습니다
-            </p>
-            <br />
-            <b>학교에 있는 다른 식당</b>
-            <div class="rest">
-              계절밥상 - 7000원 한식뷔페<br />
-              군자관(정문으로 조금 들어와서 왼쪽 큰 계단 위쪽) 6층
-            </div>
-            <div class="rest">
-              진관키친<br />
-              진관홀(안으로 쭉!!!! 들어와서 시계탑 근처) 지하1층<br />
-              여긴 순쫄찌개(순두부찌개+쫄면)가 유명해요<br />
-              전과자 세종대학교 호텔관광경영학부편에서 갔던 곳
-            </div>
-            <br />
-            <b>졸업생 꿀팁</b>
-            <p>
-              김원관(컴포즈건물) 나와서 끼고 오른쪽으로 돌면 길이 쭉~~ 있어요<br />
-              가다보면 오른쪽에 문이 있는데 <i>쪽문</i> 입니다<br />
-              군자관 진관홀 가실 거면 쪽문이 빨라요
-            </p>
-            <p>
-              근처느낌<i>좋은</i>카페<b>[롬곡][보난자]</b>느낌<i>안</i>좋은카페<b
-                >[매머드커피(김원관앞)][컴포즈커피(김원관)][투썸(대양AI센터1층)][제주몰빵(학생회관2층)]</b
-              >
-            </p>
-          </li>
-        </ul>
-      </article>
-    </section>
-    <footer></footer>
-  </body>
+				<div id="pictures">
+					<div class="pic"><img src="./sejong/sejong_main1.png" alt="#" /></div>
+					<div class="pic"><img src="./sejong/sejong_main2.png" alt="#" /></div>
+					<div class="pic"><img src="./sejong/sejong_map.png" alt="#" /></div>
+				</div>
+				<img
+					id="right"
+					class="arrow"
+					src="right.png"
+					alt="#"
+					onclick="right()"
+				/>
+			</div>
+		</header>
+		<section>
+			<article id="re_name">건대맛집세종대¿¿¿¿¿</article>
+			<article id="re_time">
+				학생회관 B1 10:30 - 19:00(18:59 라스트오더 아마도,,,)
+				<b>토, 일요일, 공휴일 휴무,</b> 15:00 - 16:30 브레이크타임<br />
+				학생회관????? 정문 들어오자마자 오른쪽에 있는 건물
+			</article>
+			<article id="re_menu">
+				<ul>
+					<li>
+						<h1>추천 메뉴</h1>
+						<table border="1">
+							<tr>
+								<th colspan="2">육회비빔밥</th>
+								<th colspan="2">닭강정 오므라이스</th>
+								<th colspan="2">세종대왕돈까스</th>
+							</tr>
+							<tr>
+								<td>
+									<div class="image">
+										<img src="./sejong/sejong_menu_bibim.png" alt="" />
+									</div>
+								</td>
+								<td>
+									<i>가격최신업데이트안됨...</i><br />마지막으로 먹었을 때
+									5000원이던가... 5500원이었나 6000원이었나...<br />맛있어요!
+									홍석천이원일 유튜브에 나왔고 가성비 굿
+								</td>
+								<td>
+									<div class="image">
+										<img src="./sejong/sejong_menu_omu.png" alt="" />
+									</div>
+								</td>
+								<td>
+									빨리 나와요 그리고 오므라이스가 맛있어요<br />타이밍 잘 맞으면
+									맛있는 닭강정을 먹을 수 있답니다
+								</td>
+								<td>
+									<div class="image">
+										<img src="./sejong/sejong_menu_don.png" alt="" />
+									</div>
+								</td>
+								<td>
+									세종대 왕돈까스<br />세종대왕 돈까스<br />세종VS왕돈까스<br />전
+									안 먹어봤는데 배고플 때 배부르게 먹고 싶을 때 먹는다고
+									하더라구요
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li>
+						<h1>생생후기. . .</h1>
+						<table id="review" border="1">
+							<tr>
+								<th></th>
+								<th>맛</th>
+								<th>거리</th>
+								<th>청결</th>
+								<th>식곤증</th>
+								<th>재방문의사</th>
+								<th>한줄평</th>
+							</tr>
+							<tr>
+								<td>팀원1</td>
+								<td>4.3</td>
+								<td>5</td>
+								<td>4.4</td>
+								<td>5</td>
+								<td>4.3</td>
+								<td>
+									3월의 학생회관 식당에는 사람이 정말정말 많아요<br />
+									세종대 건국대 한양대 만남의 장소,,,<br />
+								</td>
+							</tr>
+							<tr>
+								<td>팀원2</td>
+								<td>4</td>
+								<td>5</td>
+								<td>5</td>
+								<td>4</td>
+								<td>4.5</td>
+								<td>닭강정 오므라이스 맛있게 잘 먹었습니다</td>
+							</tr>
+							<tr>
+								<td>팀원3</td>
+								<td>5</td>
+								<td>4</td>
+								<td>5</td>
+								<td>5</td>
+								<td>5</td>
+								<td>후라이 덮은 짜장면이 감칠맛있고 좋았습니다!</td>
+							</tr>
+						</table>
+					</li>
+					<li>
+						<h1>기타 정보</h1>
+						<p><b>새우튀김알밥</b> 무난하게 맛있음</p>
+						<p>
+							<b>스팸치즈순두부찌개</b> 아는 사람만 아는 존맛 메뉴<br />방금
+							찾아봤는데 사라졌다는 말도 있어서 메뉴에 있다면 한 번쯤
+							드셔보세요~~
+						</p>
+						<p>
+							<b>우삼겹된장찌개</b> 스팸치즈순두부찌개처럼 자주 사라졌다가
+							갑자기 등장하는 메뉴인데 추울 때 비올 때 자주 먹었던 기억이 나네요
+						</p>
+						<p>
+							<b>소금구이덮밥</b> 제가 새내기였을 때 제일 유명했던 메뉴예요<br />소스에
+							고기를 찍어드시면 됩니다... 좀 짤 수 있으니 적당히 찍어야 돼요
+						</p>
+						<p><b>돈까스냉모밀</b> 제친구는맨날이것만먹었어요</p>
+						<p>
+							가끔 <b>럭키비키참치비빔밥</b>, <b>마그마굽네덮밥(?)</b> 이런 알
+							수 없는 메뉴들이 나오는데 생각보다 먹을만 해요<br />가격대는
+							3500~6000원 정도 되는 것 같습니다
+						</p>
+						<br />
+						<b>학교에 있는 다른 식당</b>
+						<div class="rest">
+							계절밥상 - 7000원 한식뷔페<br />
+							군자관(정문으로 조금 들어와서 왼쪽 큰 계단 위쪽) 6층
+						</div>
+						<div class="rest">
+							진관키친<br />
+							진관홀(안으로 쭉!!!! 들어와서 시계탑 근처) 지하1층<br />
+							여긴 순쫄찌개(순두부찌개+쫄면)가 유명해요<br />
+							전과자 세종대학교 호텔관광경영학부편에서 갔던 곳
+						</div>
+						<br />
+						<b>졸업생 꿀팁</b>
+						<p>
+							김원관(컴포즈건물) 나와서 끼고 오른쪽으로 돌면 길이 쭉~~ 있어요<br />
+							가다보면 오른쪽에 문이 있는데 <i>쪽문</i> 입니다<br />
+							군자관 진관홀 가실 거면 쪽문이 빨라요
+						</p>
+						<p>
+							근처느낌<i>좋은</i>카페<b>[롬곡][보난자]</b>느낌<i>안</i>좋은카페<b
+								>[매머드커피(김원관앞)][컴포즈커피(김원관)][투썸(대양AI센터1층)][제주몰빵(학생회관2층)]</b
+							>
+						</p>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<footer></footer>
+	</body>
 </html>
